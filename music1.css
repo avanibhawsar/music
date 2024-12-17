@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.musicplayer {
+    background-color: bisque;
+    width: 700px;
+    padding: 25px 35px;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+}
+
+.circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    color: #f53192;
+    box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+}
+
+img {
+    width: 250px;
+    border-radius: 50%;
+    border: 8px solid#fff;
+    box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+
+
+}
+
+.musicplayer {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    margin: top 20px;
+}
+
+.musicplayer p {
+    font-size: 14px;
+    color: #333
+}
+
+#progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background-color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 50%;
+
+
+}
+
+.controls div {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    background-color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #f53192;
+    box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+
+}
+.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: bisque;
+            /* Darker shade for the navbar */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Subtle shadow */
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+    
+        .navbar h1 {
+            font-size: 24px;
+            color: #ff7675;
+            /* Highlight theme color */
+            font-weight: bold;
+        }
+    
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+    
+        .navbar ul li {
+            display: inline;
+        }
+    
+        .navbar ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #010101;
+            /* Light gray for links */
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+    
+        .navbar ul li a:hover {
+            background-color: #ff7675;
+            /* Highlight on hover */
+            color: #2c3e50;
+            /* Dark text on hover */
+        }
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(180deg, #FF7675 0%, rgba(162, 149, 149, 0.5) 90%);
+    /* Dark theme matching navbar */
+    color: #0b0c0c;
+    /* Light text */
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* Sidebar on the right side */
+    padding: 20px;
+    overflow-y: auto;
+    /* Enables scrolling */
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+}
+
+/* Sidebar Title */
+.sidebar h2 {
+    font-size: 20px;
+    color: #373333;
+    /* Highlight color */
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #110e0e;
+    padding-bottom: 10px;
+}
+
+/* Sidebar List Styling */
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: bisque;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #ff7675;
+    color: rgb(87, 57, 20);
+    /* Invert text color */
+}
+
+/* Song Thumbnail */
+.sidebar ul li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #ecf0f1;
+    /* White border for image */
+}
+
+/* Song Text */
+.sidebar ul li p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar ul li img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .sidebar ul li p {
+        font-size: 14px;
+    }
+}
+.albums-sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(180deg, #FF7675 0%, rgba(162, 149, 149, 0.5) 90%);
+    /* Dark background theme */
+    color: #18191a;
+    /* Light text */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Fixed to the left side */
+    padding: 20px;
+    overflow-y: auto;
+    /* Enables vertical scrolling */
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
+}
+
+/* Sidebar Title */
+.albums-sidebar h2 {
+    font-size: 20px;
+    color: #0f0e0e;
+    /* Highlight color */
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #252020;
+    padding-bottom: 10px;
+}
+
+/* Albums List Styling */
+.albums-sidebar ul {
+    list-style: none;
+}
+
+.albums-sidebar ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: bisque;
+    /* Slightly darker section background */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.albums-sidebar ul li:hover {
+    background-color: #ff7675;
+    color: #2c3e50;
+    /* Text color inversion */
+}
+
+/* Album Cover */
+.albums-sidebar ul li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    /* Slightly rounded edges */
+    margin-right: 10px;
+    border: 2px solid #ecf0f1;
+    /* White border around image */
+}
+
+/* Album Name */
+.albums-sidebar ul li p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .albums-sidebar {
+        width: 200px;
+    }
+
+    .albums-sidebar ul li img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .albums-sidebar ul li p {
+        font-size: 14px;
+    }
+}

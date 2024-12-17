@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="music1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 style="font-family: sans-serif; color: #333">Music Player</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#playlist">Playlist</a></li>
+        <li><a href="#albums">Albums</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="albums-sidebar">
+      <br />
+      <br />
+      <br />
+
+      <h2><b>Your Albums</b></h2>
+      <ul>
+        <li>
+          <img src="./Screenshot 2024-12-15 130108.png" alt="Album 1" />
+          <p>Party Song</p>
+        </li>
+        <li>
+          <img src="./Screenshot 2024-12-15 130129.png" alt="Album 2" />
+          <p>Love Hits</p>
+        </li>
+        <li>
+          <img src="./Screenshot 2024-12-15 130138.png" alt="Album 3" />
+          <p>Telugu Hits</p>
+        </li>
+        <li>
+          <img src="./Screenshot 2024-12-15 130201.png" alt="Album 4" />
+          <p>20's Hits</p>
+        </li>
+        <li>
+          <img src="./Screenshot 2024-12-15 130212.png" alt="Album 5" />
+          <p>Bollywood Mush</p>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="musicplayer">
+        <nav class="nav">
+          <div class="circle">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="circle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+        <img src="/Screenshot 2024-12-15 102230.png" alt="" />
+        <h1>Sahiba</h1>
+        <p>Stebin Ben , Jasleen Royal</p>
+        <audio controls id="song">
+          <source src="./Srivalli Pushpa The Rise 128 Kbps.mp3" type="audio" />
+        </audio>
+        <input type="range" value="0" id="progress" />
+        <div class="controls">
+          <div><i class="fa-solid fa-backward"></i></div>
+          <div onclick="playpause()">
+            <i class="fa-solid fa-play" id="ctrlIcon"></i>
+          </div>
+          <div><i class="fa-solid fa-forward"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <br />
+      <br />
+      <h2><b>Recently Played</b></h2>
+      <ul>
+        <li>
+          <img src="./Screenshot 2024-12-15 130724.png" alt="Song 1" />
+          <p>Kal Ho Na Ho</p>
+        </li>
+        <li>
+          <img src="./Screenshot 2024-12-15 130745.png" alt="Song 2" />
+          <p>Kasturi</p>
+        </li>
+        <li>
+          <img src="./Screenshot 2024-12-15 130804.png" alt="Song 3" />
+          <p>Khubsoorat</p>
+        </li>
+        <li>
+          <img src="./Screenshot 2024-12-15 130817.png" alt="Song 4" />
+          <p>AMi Je Tomar</p>
+        </li>
+        <li>
+          <img src="./Screenshot 2024-12-15 130827.png" alt="Song 5" />
+          <p>Dholna</p>
+        </li>
+      </ul>
+    </div>
+    <script>
+      let progress = document.getElementById("progress");
+      let song = document.getElementById("song");
+      let ctrlIcon = document.getElementById("ctrlIcon");
+      song.onloadedmetadata = function () {
+        progress.max = song.duration;
+        progress.value = song.currentTime;
+      };
+      function playpause() {
+        if (ctrlIcon.classList.contains("fa-pause")) {
+          song.pause();
+          ctrlIcon.classList.remove("fa-pause");
+          ctrlIcon.classList.add("fa-play");
+        } else {
+          song.play();
+          ctrlIcon.classList.add("fa-pause");
+          ctrlIcon.classList.remove("fa-play");
+        }
+      }
+      if (song.play()) {
+        setInterval(() => {
+          progress.value = song.currentTime;
+        }, 500);
+      }
+    </script>
+  </body>
+</html>
